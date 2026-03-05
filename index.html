@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>மாசி · Maazi</title>
+
+  <!-- ===== PROTECTION FEATURES ===== -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Font: Alex Brush -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+
+  <style>
+    /* Protection Styles */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    img,
+    video {
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      pointer-events: none;
+    }
+
+    @media print {
+      body {
+        display: none;
+      }
+
+      body::after {
+        content: "This content is protected and cannot be printed.";
+        display: block;
+        padding: 20px;
+        text-align: center;
+        font-size: 18px;
+        color: red;
+      }
+    }
+
+    noscript {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      color: red;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      font-size: 20px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* ----- CUSTOM SCROLLBAR (Black & Yellow Theme) ----- */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #0a0a0a;
+      border: 1px solid #f5c54230;
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #f5c542;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #f5c542;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ffd966;
+      box-shadow: 0 0 15px #f5c542;
+    }
+
+    /* Firefox scrollbar */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #f5c542 #0a0a0a;
+    }
+
+    /* ----- RESET & VARIABLES ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
+    }
+
+    body {
+      background-color: #0b0b0b;
+      color: #f0f0f0;
+    }
+
+    :root {
+      --bg-dark: #0a0a0a;
+      --glow-yellow: #f5c542;
+      --glow-shadow: 0 0 10px #f5c542, 0 0 25px #ffb347;
+    }
+
+    /* ----- HEADER ----- */
+    .shop-header {
+      background-color: #000;
+      padding: 0.8rem 1.5rem;
+      border-bottom: 2px solid var(--glow-yellow);
+      box-shadow: var(--glow-shadow);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-video {
+      width: 100px;
+      height: 80px;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: black;
+    }
+
+    .logo-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .shop-name {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin: 0 auto;
+      transform: translateX(0);
+    }
+
+    .tamil-name {
+      font-size: 2.5rem;
+      line-height: 1;
+      color: var(--glow-yellow);
+      text-shadow: 0 0 8px #f5c542;
+      border-right: 3px solid var(--glow-yellow);
+      padding-right: 1.2rem;
+    }
+
+    .eng-name {
+      font-family: 'Alex Brush', cursive;
+      font-size: 2.8rem;
+      color: white;
+      text-shadow: 0 0 5px #ffd966;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .header-tag {
+      font-size: 0.9rem;
+      color: #f5c542;
+      letter-spacing: 2px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ----- VIDEO SECTION ----- */
+    .video-section {
+      width: 100%;
+      height: 80vh;
+      position: relative;
+      overflow: hidden;
+      background-color: black;
+      border-bottom: 2px solid var(--glow-yellow);
+    }
+
+    #section-video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+
+    .video-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.1);
+      pointer-events: none;
+    }
+
+    /* ----- SECTION TITLES ----- */
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .section-title i {
+      color: var(--glow-yellow);
+      margin: 0 10px;
+    }
+
+    /* ===== 3D PAGE FLIP MENU SECTION ===== */
+    .menu-section {
+      padding: 3rem 1.5rem;
+      background: #0a0a0a;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.9), 0 0 30px #f5c54220;
+      border: 2px solid #f5c54230;
+    }
+
+    /* ---------- 3D BOOK CONTAINER ---------- */
+    .book-wrapper {
+      perspective: 3500px;
+      margin: 1rem auto;
+      max-width: 1100px;
+      position: relative;
+    }
+
+    .book {
+      background: #000;
+      border-radius: 15px 30px 30px 15px;
+      box-shadow: 0 20px 30px -10px black,
+        0 0 0 2px #f5c54260,
+        inset 0 0 30px #f5c54220;
+      border-left: 12px solid #f5c542;
+      border-right: 12px solid #f5c542;
+      padding: 1.5rem 0.5rem;
+      position: relative;
+    }
+
+    /* spine decoration with glow */
+    .book::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      left: -6px;
+      width: 6px;
+      background: linear-gradient(to right, #f5c542, #ffd966, #f5c542);
+      border-radius: 3px;
+      box-shadow: 0 0 15px #f5c542;
+    }
+
+    .book::after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      bottom: 30px;
+      right: -6px;
+      width: 6px;
+      background: linear-gradient(to left, #f5c542, #ffd966, #f5c542);
+      border-radius: 3px;
+      box-shadow: 0 0 15px #f5c542;
+    }
+
+    /* ----- FLIP CONTAINER (3D scene) ----- */
+    .flip-scene {
+      position: relative;
+      width: 100%;
+      min-height: 600px;
+      background: transparent;
+      margin: 0 auto;
+    }
+
+    .flip-book {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* spread wrapper - holds pages */
+    .spread-wrapper {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      transform-style: preserve-3d;
+    }
+
+    /* base page style (black & yellow theme) */
+    .page {
+      flex: 0 0 48%;
+      max-width: 48%;
+      background: #0d0d0d;
+      border: 2px solid #f5c542;
+      border-radius: 2px 20px 20px 2px;
+      padding: 1.8rem 1.5rem;
+      box-shadow: -5px 5px 0 #f5c54240, 0 10px 25px black;
+      color: #f0f0f0;
+      font-family: 'Segoe UI', 'Georgia', serif;
+      overflow-y: auto;
+      max-height: 600px;
+      transition: all 0.3s ease;
+      position: relative;
+      background-image: radial-gradient(circle at 10% 20%, #f5c54210 1px, transparent 1px);
+      background-size: 20px 20px;
+      /* Custom scrollbar for pages */
+      scrollbar-width: thin;
+      scrollbar-color: #f5c542 #1a1a1a;
+    }
+
+    .page::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .page::-webkit-scrollbar-track {
+      background: #1a1a1a;
+      border: 1px solid #f5c54230;
+      border-radius: 10px;
+    }
+
+    .page::-webkit-scrollbar-thumb {
+      background: #f5c542;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #f5c542;
+    }
+
+    /* left page specific shadow */
+    .page:first-child {
+      transform-origin: right center;
+      box-shadow: -8px 5px 15px rgba(245, 197, 66, 0.2), 0 10px 25px black;
+    }
+
+    /* right page specific shadow */
+    .page:last-child {
+      transform-origin: left center;
+      box-shadow: 8px 5px 15px rgba(245, 197, 66, 0.2), 0 10px 25px black;
+    }
+
+    /* mobile single page style */
+    @media (max-width: 800px) {
+      .page {
+        flex: 0 0 95%;
+        max-width: 95%;
+        margin: 0 auto;
+      }
+
+      .page:first-child,
+      .page:last-child {
+        box-shadow: -5px 5px 0 #f5c54240, 0 10px 25px black;
+      }
+    }
+
+    .page-header {
+      font-size: 1.6rem;
+      font-weight: 700;
+      border-bottom: 2px dashed #f5c542;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      color: #f5c542;
+      text-shadow: 0 0 5px #f5c542;
+      font-family: 'Georgia', serif;
+    }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px dotted #f5c54260;
+      font-size: 1.05rem;
+      color: #fff;
+    }
+
+    .menu-item .price {
+      color: #f5c542;
+      font-weight: 700;
+      background: #1a1a1a;
+      padding: 0.1rem 0.8rem;
+      border-radius: 20px;
+      font-size: 1rem;
+      box-shadow: inset 0 1px 3px rgba(245, 197, 66, 0.3), 0 0 8px #f5c54260;
+      margin-left: 10px;
+      white-space: nowrap;
+      border: 1px solid #f5c54240;
+    }
+
+    .small-note {
+      font-size: 0.8rem;
+      color: #f5c542cc;
+      margin-top: 0.8rem;
+      font-style: italic;
+      text-align: right;
+      border-top: 1px dashed #f5c54280;
+      padding-top: 0.5rem;
+    }
+
+    /* page number decoration */
+    .page::after {
+      content: '✦ ✦ ✦';
+      position: absolute;
+      bottom: 8px;
+      right: 20px;
+      font-size: 12px;
+      color: #f5c542;
+      letter-spacing: 4px;
+      opacity: 0.5;
+    }
+
+    /* Navigation buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+      align-items: center;
+    }
+
+    .page-btn {
+      background: #000;
+      border: 3px solid #f5c542;
+      color: #f5c542;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 15px #f5c542;
+    }
+
+    .page-btn:hover {
+      background: #f5c542;
+      color: #000;
+      border-color: #fff3b3;
+      box-shadow: 0 0 30px #f5c542;
+    }
+
+    .page-btn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+      box-shadow: none;
+      border-color: #f5c54260;
+    }
+
+    .page-indicator {
+      color: #f5c542;
+      font-size: 1.3rem;
+      font-weight: bold;
+      text-shadow: 0 0 8px #f5c542;
+      background: #0a0a0a;
+      padding: 0.5rem 2rem;
+      border-radius: 50px;
+      border: 2px solid #f5c542;
+    }
+
+    .swipe-hint {
+      text-align: center;
+      margin-top: 0.5rem;
+      color: #f5c542cc;
+      font-style: italic;
+      font-size: 1rem;
+    }
+
+    /* ----- GALLERY SECTION ----- */
+    .gallery-section {
+      background: #0a0a0a;
+      padding: 3rem 1.5rem;
+      border-top: 2px solid var(--glow-yellow);
+      border-bottom: 2px solid var(--glow-yellow);
+    }
+
+    .carousel-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      position: relative;
+      border: 3px solid var(--glow-yellow);
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: var(--glow-shadow);
+      background: #111;
+    }
+
+    .carousel-slide {
+      width: 100%;
+      height: 450px;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .carousel-caption {
+      background: rgba(0, 0, 0, 0.7);
+      color: var(--glow-yellow);
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      margin-bottom: 2rem;
+      font-weight: bold;
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--glow-yellow);
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      color: var(--glow-yellow);
+      border: 2px solid var(--glow-yellow);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      font-size: 2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      z-index: 5;
+    }
+
+    .carousel-btn:hover {
+      background: var(--glow-yellow);
+      color: black;
+    }
+
+    .prev {
+      left: 20px;
+    }
+
+    .next {
+      right: 20px;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 1rem 0 2rem;
+    }
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: #444;
+      border: 2px solid var(--glow-yellow);
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .dot.active {
+      background: var(--glow-yellow);
+      box-shadow: 0 0 10px #f5c542;
+    }
+
+    /* ----- FRANCHISE SECTION ----- */
+    .franchise-section {
+      background: #000;
+      padding: 2rem 1.5rem;
+      border-bottom: 2px solid var(--glow-yellow);
+    }
+
+    .franchise-form {
+      max-width: 500px;
+      margin: 1.5rem auto;
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 30px;
+      border: 2px solid var(--glow-yellow);
+      box-shadow: var(--glow-shadow);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--glow-yellow);
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      background: #1f1f1f;
+      border: 2px solid #f5c54260;
+      border-radius: 40px;
+      color: white;
+      font-size: 0.95rem;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    .form-group input:focus {
+      border-color: var(--glow-yellow);
+      box-shadow: 0 0 15px #f5c542;
+    }
+
+    .submit-btn {
+      background: transparent;
+      color: var(--glow-yellow);
+      border: 2px solid var(--glow-yellow);
+      padding: 0.7rem 1.5rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.2s;
+      width: 100%;
+      letter-spacing: 1px;
+    }
+
+    .submit-btn:hover {
+      background: var(--glow-yellow);
+      color: black;
+    }
+
+    .form-message {
+      text-align: center;
+      margin-top: 1rem;
+      color: #4caf50;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* ----- BRANCHES SECTION ----- */
+    .branches-section {
+      background: #000;
+      padding: 3rem 1.5rem;
+      border-top: 2px solid var(--glow-yellow);
+      border-bottom: 2px solid var(--glow-yellow);
+    }
+
+    .branch-clips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin: 3rem 0 1.5rem;
+    }
+
+    .branch-card-btn {
+      background: #151515;
+      width: 160px;
+      padding: 1.2rem 0.3rem;
+      text-align: center;
+      border-radius: 40px 0 40px 0;
+      border: 2px solid #f5c542;
+      box-shadow: 0 0 15px #f5c54260;
+      cursor: pointer;
+      transition: 0.2s;
+      color: white;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .branch-card-btn i {
+      font-size: 2.2rem;
+      color: var(--glow-yellow);
+      filter: drop-shadow(0 0 5px gold);
+    }
+
+    .branch-card-btn:hover {
+      background: #f5c54220;
+      transform: scale(1.02);
+      border-color: #fff3b3;
+    }
+
+    .locate-btn-container {
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0 2rem;
+    }
+
+    .locate-btn {
+      background: transparent;
+      border: 2px solid var(--glow-yellow);
+      color: var(--glow-yellow);
+      padding: 1rem 2.5rem;
+      border-radius: 60px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 0 15px #f5c542;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .locate-btn:hover {
+      background: #f5c542;
+      color: black;
+    }
+
+    .locator-panel {
+      max-width: 900px;
+      margin: 2rem auto 1rem;
+      background: #1c1c1c;
+      padding: 2rem;
+      border-radius: 40px;
+    }
+
+    .locator-select {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.2rem;
+      background: #000;
+      color: white;
+      border: 2px solid var(--glow-yellow);
+      border-radius: 50px;
+      margin-bottom: 1.8rem;
+      cursor: pointer;
+    }
+
+    .map-container {
+      width: 100%;
+      border: 3px solid #f5c542;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--glow-shadow);
+      background: #2a2a2a;
+      min-height: 350px;
+    }
+
+    .branch-address {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #111;
+      border-left: 5px solid var(--glow-yellow);
+      font-size: 1rem;
+      color: #ddd;
+      border-radius: 10px;
+      word-break: break-word;
+    }
+
+    .branch-address i {
+      color: var(--glow-yellow);
+      margin-right: 8px;
+    }
+
+    /* ----- FOOTER ----- */
+    footer {
+      background: #0a0a0a;
+      padding: 2rem 2rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #f5c542;
+    }
+
+    .footer-contact {
+      line-height: 2;
+    }
+
+    .footer-contact i {
+      color: var(--glow-yellow);
+      width: 30px;
+    }
+
+    .footer-phone {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .glow-num {
+      color: var(--glow-yellow);
+      text-shadow: 0 0 5px #f5c542;
+    }
+
+    .bala-credit {
+      color: #666;
+      font-size: 0.9rem;
+      text-align: right;
+    }
+
+    /* ----- MEDIA QUERIES ----- */
+    @media (max-width: 800px) {
+      .shop-header {
+        justify-content: center;
+        gap: 0.5rem 1rem;
+        padding: 0.8rem 0.5rem;
+      }
+
+      .shop-name {
+        transform: none;
+        margin: 0;
+        order: 2;
+        gap: 0.8rem;
+      }
+
+      .tamil-name {
+        font-size: 2rem;
+        border-right: 2px solid var(--glow-yellow);
+        padding-right: 0.8rem;
+      }
+
+      .eng-name {
+        font-size: 2.2rem;
+      }
+
+      .logo-video {
+        order: 1;
+        width: 50px;
+        height: 50px;
+      }
+
+      .header-tag {
+        order: 3;
+        font-size: 0.8rem;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .page-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+      }
+
+      .page-indicator {
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+      }
+
+      .flip-scene {
+        min-height: 500px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .video-section {
+        height: 50vh;
+      }
+
+      .branch-card-btn {
+        width: 140px;
+      }
+
+      .carousel-slide {
+        height: 250px;
+      }
+
+      .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+      }
+
+      .tamil-name {
+        font-size: 1.8rem;
+        border-right: none;
+        padding-right: 0;
+      }
+
+      .eng-name {
+        font-size: 2rem;
+      }
+
+      .shop-name {
+        gap: 0.5rem;
+      }
+
+      .logo-video {
+        width: 45px;
+        height: 45px;
+      }
+
+      .header-tag {
+        font-size: 0.75rem;
+      }
+
+      .franchise-form {
+        padding: 1.2rem;
+      }
+
+      .form-group input {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .submit-btn {
+        padding: 0.6rem 1rem;
+        font-size: 1rem;
+      }
+
+      .flip-scene {
+        min-height: 450px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="shop-header">
+    <div class="logo-video">
+      <video autoplay muted loop playsinline>
+        <source src="Maazi logo.mp4" type="video/mp4">
+        <i class="fas fa-utensils" style="color: #f5c542; font-size: 2rem;"></i>
+      </video>
+    </div>
+    <div class="shop-name">
+      <span class="tamil-name">மாசி</span>
+      <span class="eng-name">Maazi</span>
+    </div>
+    <div class="header-tag">
+      <i class="fas fa-egg"></i> since 2014 <i class="fas fa-cocktail"></i>
+    </div>
+  </div>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section">
+    <video id="section-video" autoplay muted loop playsinline>
+      <source src="Maazi cover video.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <!-- 3D PAGE FLIP MENU SECTION -->
+  <section class="menu-section">
+    <div class="section-title">
+      <i class="fas fa-book-open"></i> flip the menu · page by page <i class="fas fa-book-open"></i>
+    </div>
+
+    <div class="book-wrapper">
+      <div class="book">
+        <!-- 3D flip scene -->
+        <div class="flip-scene" id="flipScene">
+          <div class="flip-book" id="flipBook">
+            <!-- spread will be injected here -->
+            <div class="spread-wrapper" id="spreadWrapper"></div>
+          </div>
+        </div>
+
+        <!-- navigation -->
+        <div class="nav-buttons">
+          <button class="page-btn" id="prevBtn" disabled><i class="fas fa-chevron-left"></i></button>
+          <span class="page-indicator" id="pageIndicator">Page 1 / 10</span>
+          <button class="page-btn" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="swipe-hint">
+          <i class="fas fa-hand-point-left"></i> swipe or click to turn pages <i class="fas fa-hand-point-right"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTION -->
+  <section class="gallery-section">
+    <div class="section-title"><i class="fas fa-images"></i> our gallery <i class="fas fa-images"></i></div>
+    <div class="carousel-container">
+      <button class="carousel-btn prev" id="galleryPrevBtn">❮</button>
+      <div class="carousel-slide" id="carouselSlide">
+        <div class="carousel-caption" id="slideCaption">Tender Coconut Special</div>
+      </div>
+      <button class="carousel-btn next" id="galleryNextBtn">❯</button>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <!-- BRANCHES SECTION -->
+  <section class="branches-section">
+    <div class="section-title"><i class="fas fa-store-alt"></i> our 12 branches <i class="fas fa-store-alt"></i></div>
+    <div class="branch-clips" id="branchCardsContainer"></div>
+    <div class="locate-btn-container">
+      <button class="locate-btn" id="locateBtn"><i class="fas fa-location-arrow"></i> Locate near shop</button>
+    </div>
+    <div class="locator-panel">
+      <label style="color: #f5c542; font-weight: 600; margin-left: 10px;"><i class="fas fa-map-pin"></i> or select from
+        dropdown</label>
+      <select id="branchSelect" class="locator-select"></select>
+      <div class="map-container" id="mapContainer" style="height: 350px;"></div>
+      <div class="branch-address" id="branchAddress"><i class="fas fa-location-dot"></i></div>
+    </div>
+  </section>
+
+  <!-- FRANCHISE SECTION -->
+  <section class="franchise-section">
+    <div class="section-title"><i class="fas fa-handshake"></i> join a franchise <i class="fas fa-handshake"></i></div>
+    <div class="franchise-form">
+      <form id="franchiseForm">
+        <div class="form-group">
+          <label><i class="fas fa-user"></i> Name</label>
+          <input type="text" id="franchiseName" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-envelope"></i> Email</label>
+          <input type="email" id="franchiseEmail" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-phone-alt"></i> Mobile</label>
+          <input type="tel" id="franchiseMobile" placeholder="10-digit mobile number" required pattern="[0-9]{10}">
+        </div>
+        <button type="submit" class="submit-btn"><i class="fas fa-paper-plane"></i> submit enquiry</button>
+        <div class="form-message" id="formMessage"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-contact">
+      <div><i class="fas fa-map-marker-alt"></i> HQ: 12, Choolaimedu High Rd, Chennai-94</div>
+      <div><i class="fas fa-phone-alt"></i> <span class="footer-phone"><span class="glow-num">044 3156 1994</span> /
+          <span class="glow-num">95000 10111</span></span></div>
+      <div><i class="fas fa-clock"></i> Open 24 hrs</div>
+    </div>
+    <div class="bala-credit">
+      <span style="color: #f5c542;">மாசி | Maazi</span> · since 2014
+    </div>
+  </footer>
+
+  <!-- GLOW LINE -->
+  <div style="text-align:center; background:#000; padding:5px; border-top:1px solid #f5c542;">
+    <span style="color: #f5c542;"><i class="fas fa-moon"></i> When the world sleeps, the grind continues <i
+        class="fas fa-sun"></i></span>
+  </div>
+
+  <script>
+    // ========== PROTECTION SCRIPT ==========
+    (function () {
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'F12' || e.keyCode === 123) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && (e.key === 'U' || e.keyCode === 85)) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && (e.key === 'S' || e.keyCode === 83)) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.keyCode === 74)) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'C' || e.keyCode === 67)) {
+          e.preventDefault();
+          return false;
+        }
+        if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.keyCode === 73)) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      document.addEventListener('copy', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      document.addEventListener('cut', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      document.addEventListener('paste', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      document.addEventListener('dragstart', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      document.addEventListener('drop', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      let devToolsOpened = false;
+
+      if (typeof console !== 'undefined') {
+        console.log = function () { };
+        console.info = function () { };
+        console.warn = function () { };
+        console.error = function () { };
+        console.debug = function () { };
+        console.table = function () { };
+      }
+
+      setInterval(function () {
+        const start = new Date();
+        debugger;
+        const end = new Date();
+        if (end - start > 100) {
+          if (!devToolsOpened) {
+            devToolsOpened = true;
+            alert('Developer tools detected! Please close them to continue.');
+          }
+        }
+      }, 1000);
+
+      setInterval(function () {
+        if (typeof console !== 'undefined' && console.clear) {
+          console.clear();
+        }
+      }, 1000);
+
+      const watermark = document.createElement('div');
+      watermark.style.cssText = 'position:fixed; bottom:5px; right:5px; color:rgba(245,197,66,0.2); font-size:10px; z-index:9999; pointer-events:none;';
+      watermark.innerText = '© Maazi Cafe - All Rights Reserved';
+      document.body.appendChild(watermark);
+
+      if (window.top !== window.self) {
+        window.top.location.href = window.self.location.href;
+      }
+
+      document.querySelectorAll('img, video').forEach(function (el) {
+        el.addEventListener('contextmenu', function (e) {
+          e.preventDefault();
+          return false;
+        });
+      });
+
+      console.log('%c⚠️ Protected Content ⚠️', 'font-size:20px; color:red; font-weight:bold;');
+      console.log('This website is protected. Unauthorized access is prohibited.');
+    })();
+
+    // ========== 3D PAGE FLIP MENU ==========
+    (function () {
+      // Complete menu data (10 single pages)
+      const singlePages = [
+        // Page 1 - SPECIAL MILK SHAKE
+        {
+          title: '🥤 SPECIAL MILK SHAKE',
+          items: [
+            { name: 'OREO', price: 80 }, { name: 'BOURBON', price: 70 }, { name: 'NABATTI', price: 70 },
+            { name: 'DARK FANTASY', price: 80 }, { name: 'PINK LADY', price: 70 }, { name: 'KIT KAT', price: 80 },
+            { name: 'DAIRY MILK', price: 70 }, { name: 'FIVE STAR', price: 70 }, { name: 'SNICKERS', price: 80 },
+            { name: 'SHARJAH', price: 80 }, { name: 'SALDI', price: 80 }, { name: 'ALMOND', price: 100 },
+            { name: 'CASHEW', price: 100 }, { name: 'MUTELLA', price: 120 }, { name: 'BLACK DIAMOND', price: 100 },
+            { name: 'ALMOND CASHEW', price: 110 }
+          ],
+          note: '+ ₹30 EXTRA WITH ICE CREAM'
+        },
+        // Page 2 - COLD MILK & LASSI
+        {
+          title: '🥛 COLD MILK',
+          items: [
+            { name: 'ROSE MILK', price: 50 }, { name: 'PISTA MILK', price: 50 }, { name: 'COLD COFFEE', price: 70 },
+            { name: 'COLD BOOST', price: 70 }, { name: 'COLD HORLICKS', price: 60 }
+          ],
+          secondaryTitle: '🍶 LASSI',
+          secondaryItems: [
+            { name: 'PLAIN', price: 40 }, { name: 'SALT', price: 40 }, { name: 'PINE APPLE', price: 60 },
+            { name: 'PAPAYA', price: 60 }, { name: 'BADAM', price: 60 }, { name: 'CHIKKU', price: 60 },
+            { name: 'GRAPE', price: 60 }, { name: 'MIXED FRUIT', price: 80 }, { name: 'MANGO', price: 70 },
+            { name: 'STRAWBERRY', price: 70 }, { name: 'DRY FRUIT', price: 80 }
+          ]
+        },
+        // Page 3 - FRESH JUICE
+        {
+          title: '🧃 FRESH JUICE',
+          items: [
+            { name: 'WATER MELON', price: 40 }, { name: 'PINEAPPLE', price: 60 }, { name: 'BEETROOT', price: 70 },
+            { name: 'MANGO', price: 70 }, { name: 'PAPAYA', price: 60 }, { name: 'APPLE', price: 70 },
+            { name: 'CARROT', price: 70 }, { name: 'SATHUKUDI', price: 60 }, { name: 'ORANGE', price: 70 },
+            { name: 'POMEGRANATE', price: 70 }, { name: 'GRAVY', price: 60 }, { name: 'MUSK MELON', price: 50 },
+            { name: 'STRAWBERRIES', price: 80 }, { name: 'ABC', price: 80 }
+          ]
+        },
+        // Page 4 - MONSTER SHAKE & SHOTS
+        {
+          title: '👹 MONSTER SHAKE',
+          items: [
+            { name: 'KIT KAT', price: 140 }, { name: 'OREO', price: 140 }, { name: 'SNICKERS', price: 140 },
+            { name: 'STRAWBERRY', price: 140 }, { name: 'MANGO', price: 140 }, { name: 'KERALA SPECIAL', price: 140 },
+            { name: 'BOOST AVIL MILK', price: 90 }, { name: 'HORLICKS AVIL MILK', price: 100 },
+            { name: 'FRUITS AVIL MILK', price: 90 }, { name: 'DRY FRUITS AVIL MILK', price: 120 },
+            { name: 'SPECIAL AVIL MILK', price: 110 }
+          ],
+          secondaryTitle: '💉 SHOTS',
+          secondaryItems: [
+            { name: 'SODA SHOTS', price: 80 }, { name: 'LASIK SHOTS', price: 80 }, { name: 'FRUITS SHOTS', price: 80 }
+          ]
+        },
+        // Page 5 - HONEY SPECIAL & RECREAM SHAKE
+        {
+          title: '🍯 HONEY SPECIAL',
+          items: [
+            { name: 'HONEY DATES', price: 100 }, { name: 'HONEY FIG', price: 100 }, { name: 'HONEY CHICKOO', price: 100 },
+            { name: 'HONEY MANGO', price: 100 }, { name: 'HONEY BUTTER', price: 110 }, { name: 'HONEY BANANA', price: 90 },
+            { name: 'HONEY CARROT', price: 90 }, { name: 'HONEY ABC', price: 100 }
+          ],
+          secondaryTitle: '🍦 RECREAM SHAKE',
+          secondaryItems: [
+            { name: 'VANILLA SHAKE', price: 100 }, { name: 'STRAWBERRY SHAKE', price: 100 },
+            { name: 'CHOCOLATE SHAKE', price: 110 }, { name: 'BUTTERSCOTCH SHAKE', price: 110 },
+            { name: 'PISTA SHAKE', price: 100 }, { name: 'MANGO SHAKE', price: 100 },
+            { name: 'BLACK CURANT SHAKE', price: 140 }, { name: 'KULI SHAKE', price: 140 }
+          ]
+        },
+        // Page 6 - FRUIT MILK SHAKE
+        {
+          title: '🍌 MILK SHAKE (FRUIT)',
+          items: [
+            { name: 'CHIKKU', price: 70 }, { name: 'RED BANANA', price: 70 }, { name: 'FIG', price: 80 },
+            { name: 'APPLE', price: 70 }, { name: 'PAPPAYA', price: 70 }, { name: 'SEETHAPAZHAM', price: 70 },
+            { name: 'CHERRY', price: 70 }, { name: 'DRAGON FRUIT', price: 70 }, { name: 'KIWI', price: 80 },
+            { name: 'POMEGRANATE', price: 70 }, { name: 'GRAPE', price: 70 }, { name: 'MANGO', price: 80 },
+            { name: 'STRAWBERRY', price: 80 }, { name: 'DATES', price: 90 }, { name: 'JACK FRUIT', price: 80 },
+            { name: 'BUTTER', price: 100 }, { name: 'CARROT', price: 80 }, { name: 'PASSION FRUIT', price: 80 }
+          ],
+          note: '+ ₹30 EXTRA WITH ICE CREAM'
+        },
+        // Page 7 - SODA SPECIAL & ICE CREAM
+        {
+          title: '🥤 SODA SPECIAL',
+          items: [
+            { name: 'LEMON SODA', price: 30 }, { name: 'PEPPER SODA', price: 35 }, { name: 'ORANGE SODA', price: 50 },
+            { name: 'JAL JEERA SODA', price: 50 }, { name: 'GINGER SODA', price: 35 }, { name: 'CHILI SODA', price: 40 },
+            { name: 'MINT SODA', price: 40 }, { name: 'STRAWBERRY SODA', price: 50 }, { name: 'GREEN APPLE SODA', price: 50 },
+            { name: 'BLUEBERRY SODA', price: 50 }, { name: 'BLUE CUBACÃO', price: 50 }, { name: 'KULIKI SODA', price: 80 }
+          ],
+          secondaryTitle: '🍦 ICE CREAM SCOOP',
+          secondaryItems: [
+            { name: 'VANILLA', price: 90 }, { name: 'STRAWBERRY', price: 90 }, { name: 'CHOCOLATE', price: 100 },
+            { name: 'BUTTERSCOTCH', price: 100 }, { name: 'PISTA', price: 90 }, { name: 'MANGO', price: 90 },
+            { name: 'BLACK CURANT', price: 120 }, { name: 'KULIT', price: 120 }
+          ]
+        },
+        // Page 8 - MOJITO
+        {
+          title: '🍃 MOJITO',
+          items: [
+            { name: 'STRAWBERRY', price: 80 }, { name: 'GRAPE', price: 80 }, { name: 'KIWI', price: 80 },
+            { name: 'BUTTER COCONUT', price: 80 }, { name: 'ORANGE', price: 80 }, { name: 'ROSE', price: 80 },
+            { name: 'LITCHI', price: 80 }, { name: 'PINE APPLE', price: 80 }, { name: 'BLACK CURANT', price: 80 },
+            { name: 'COCONUT', price: 80 }, { name: 'BLUE BERRY', price: 80 }, { name: 'VIRGIN MOJITO', price: 80 },
+            { name: 'CHILLI MOJITO', price: 80 }, { name: 'BLUE COLOR', price: 80 }, { name: 'BLUE CURACAO', price: 80 },
+            { name: 'PASSION FRUIT', price: 80 }, { name: 'POMEGRANATE', price: 80 }
+          ]
+        },
+        // Page 9 - TENDER COCONUT
+        {
+          title: '🥥 TENDER COCONUT',
+          items: [
+            { name: 'TENDER DATES', price: 100 }, { name: 'TENDER DRAGON', price: 90 }, { name: 'TENDER POMO', price: 100 },
+            { name: 'TENDER CHICKOO', price: 90 }, { name: 'TENDER OREO', price: 90 }, { name: 'TENDER STRAWBERRY', price: 90 },
+            { name: 'TENDER AVACADO', price: 110 }, { name: 'TENDER FIG', price: 90 }, { name: 'TENDER MANGO', price: 80 },
+            { name: 'TENDER CARROT', price: 80 }, { name: 'TENDER BANANA', price: 80 }, { name: 'TENDER LASSI', price: 80 }
+          ],
+          secondaryTitle: '💧 TENDER WATERMELON',
+          secondaryItems: [
+            { name: 'TENDER DOSAMBI', price: 70 }, { name: 'TENDER MOSAMBI', price: 80 }, { name: 'TENDER KIWI', price: 90 },
+            { name: 'TENDER MUSK', price: 80 }, { name: 'TENDER SHAKE', price: 80 }, { name: 'TENDER BROWNIE', price: 110 },
+            { name: 'TENDER CHOCOLATE', price: 100 }, { name: 'TENDER LEMON', price: 80 }, { name: 'TENDER GRAPE', price: 80 },
+            { name: 'TENDER SABIA', price: 80 }, { name: 'TENDER AMLA', price: 80 }, { name: 'TENDER NONGU', price: 90 }
+          ]
+        },
+        // Page 10 - FALOODA & COMBO
+        {
+          title: '🍧 FALOODA',
+          items: [
+            { name: 'CLASSIC', price: 100 }, { name: 'VANILLA', price: 120 }, { name: 'STRAWBERRY', price: 130 },
+            { name: 'BUTTERSCOTCH', price: 130 }, { name: 'CHOCOLATE', price: 130 }, { name: 'PISTA', price: 130 },
+            { name: 'MANGO', price: 130 }, { name: 'BLACK CURANT', price: 130 }, { name: 'KULFI', price: 140 },
+            { name: 'ROYAL', price: 160 }, { name: 'DRY FRUIT', price: 160 }, { name: 'MAAZI SPECIAL', price: 160 },
+            { name: 'SPECIAL FRUIT SALAD', price: 100 }, { name: 'FRUIT SALAD WITH ICECREAM', price: 130 }
+          ],
+          secondaryTitle: '🥗 CHATS & COMBO',
+          secondaryItems: [
+            { name: 'DAHI POORI', price: 50 }, { name: 'PANI POORI', price: 35 }, { name: 'BHEL POORI', price: 50 },
+            { name: 'CLASSIC FALOODA + ZINGER FRANKIE', price: 209 },
+            { name: 'OREO MONSTER + CHICKEN CHEESE BURGER', price: 239 },
+            { name: 'CHICKEN WINGS + VEG SANDWICH + SOFT DRINKS', price: 299 }
+          ]
+        }
+      ];
+
+      // Desktop spreads (grouped in pairs)
+      const spreads = [
+        { left: singlePages[0], right: singlePages[1] },
+        { left: singlePages[2], right: singlePages[3] },
+        { left: singlePages[4], right: singlePages[5] },
+        { left: singlePages[6], right: singlePages[7] },
+        { left: singlePages[8], right: singlePages[9] }
+      ];
+
+      const isMobile = window.matchMedia("(max-width: 800px)").matches;
+      const totalItems = isMobile ? singlePages.length : spreads.length;
+      let currentIndex = 0;
+      let isFlipping = false;
+
+      const spreadWrapper = document.getElementById('spreadWrapper');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const pageIndicator = document.getElementById('pageIndicator');
+
+      function buildPageHtml(pageData) {
+        let html = `<div class="page">`;
+        html += `<div class="page-header"><span>${pageData.title}</span> <span>₹</span></div>`;
+        pageData.items.forEach(item => {
+          html += `<div class="menu-item"><span>${item.name}</span><span class="price">${item.price}</span></div>`;
+        });
+        if (pageData.secondaryTitle) {
+          html += `<div class="page-header" style="margin-top:20px;"><span>${pageData.secondaryTitle}</span> <span>₹</span></div>`;
+          pageData.secondaryItems.forEach(item => {
+            html += `<div class="menu-item"><span>${item.name}</span><span class="price">${item.price}</span></div>`;
+          });
+        }
+        if (pageData.note) {
+          html += `<div class="small-note">${pageData.note}</div>`;
+        }
+        html += `</div>`;
+        return html;
+      }
+
+      function renderCurrent() {
+        if (isMobile) {
+          spreadWrapper.innerHTML = buildPageHtml(singlePages[currentIndex]);
+          pageIndicator.innerText = `Page ${currentIndex + 1} / ${totalItems}`;
+        } else {
+          const spread = spreads[currentIndex];
+          spreadWrapper.innerHTML = buildPageHtml(spread.left) + buildPageHtml(spread.right);
+          pageIndicator.innerText = `Spread ${currentIndex + 1} / ${totalItems}`;
+        }
+        prevBtn.disabled = (currentIndex === 0);
+        nextBtn.disabled = (currentIndex === totalItems - 1);
+      }
+
+      function turnPage(direction) {
+        if (isFlipping) return;
+        if (direction === 'next' && currentIndex === totalItems - 1) return;
+        if (direction === 'prev' && currentIndex === 0) return;
+
+        isFlipping = true;
+
+        const pages = document.querySelectorAll('.page');
+        if (pages.length === 0) return;
+
+        const flipDuration = isMobile ? 0.7 : 0.8;
+
+        if (direction === 'next') {
+          if (isMobile) {
+            const currentPage = pages[0];
+            currentPage.style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1), box-shadow ${flipDuration}s`;
+            currentPage.style.transformOrigin = 'left center';
+            currentPage.style.transform = 'rotateY(-140deg) scale(0.9)';
+            currentPage.style.boxShadow = '-20px 10px 30px rgba(245,197,66,0.4)';
+          } else {
+            const rightPage = pages[1];
+            rightPage.style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1), box-shadow ${flipDuration}s`;
+            rightPage.style.transformOrigin = 'left center';
+            rightPage.style.transform = 'rotateY(-140deg) scale(0.95)';
+            rightPage.style.boxShadow = '-20px 10px 30px rgba(245,197,66,0.3)';
+
+            pages[0].style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1)`;
+            pages[0].style.transform = 'translateX(-5px) rotateY(2deg)';
+          }
+        } else {
+          if (isMobile) {
+            const currentPage = pages[0];
+            currentPage.style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1), box-shadow ${flipDuration}s`;
+            currentPage.style.transformOrigin = 'right center';
+            currentPage.style.transform = 'rotateY(140deg) scale(0.9)';
+            currentPage.style.boxShadow = '20px 10px 30px rgba(245,197,66,0.4)';
+          } else {
+            const leftPage = pages[0];
+            leftPage.style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1), box-shadow ${flipDuration}s`;
+            leftPage.style.transformOrigin = 'right center';
+            leftPage.style.transform = 'rotateY(140deg) scale(0.95)';
+            leftPage.style.boxShadow = '20px 10px 30px rgba(245,197,66,0.3)';
+
+            pages[1].style.transition = `transform ${flipDuration}s cubic-bezier(0.23, 1, 0.32, 1)`;
+            pages[1].style.transform = 'translateX(5px) rotateY(-2deg)';
+          }
+        }
+
+        setTimeout(() => {
+          if (direction === 'next') {
+            currentIndex++;
+          } else {
+            currentIndex--;
+          }
+
+          document.querySelectorAll('.page').forEach(page => {
+            page.style.transform = '';
+            page.style.transition = '';
+            page.style.boxShadow = '';
+            page.style.transformOrigin = '';
+          });
+
+          renderCurrent();
+          isFlipping = false;
+        }, flipDuration * 1000);
+      }
+
+      prevBtn.addEventListener('click', () => turnPage('prev'));
+      nextBtn.addEventListener('click', () => turnPage('next'));
+
+      // Swipe detection
+      let touchstartX = 0;
+      let touchendX = 0;
+
+      spreadWrapper.addEventListener('touchstart', (e) => {
+        touchstartX = e.changedTouches[0].screenX;
+      });
+
+      spreadWrapper.addEventListener('touchend', (e) => {
+        touchendX = e.changedTouches[0].screenX;
+        const diff = touchendX - touchstartX;
+        const minSwipeDistance = 40;
+
+        if (Math.abs(diff) < minSwipeDistance) return;
+
+        if (diff < 0) {
+          if (currentIndex < totalItems - 1) turnPage('next');
+        } else {
+          if (currentIndex > 0) turnPage('prev');
+        }
+
+        touchstartX = 0;
+        touchendX = 0;
+      });
+
+      spreadWrapper.addEventListener('touchcancel', (e) => {
+        touchstartX = 0;
+        touchendX = 0;
+      });
+
+      window.addEventListener('resize', () => {
+        const newIsMobile = window.matchMedia("(max-width: 800px)").matches;
+        if (isMobile !== newIsMobile) {
+          location.reload();
+        }
+      });
+
+      renderCurrent();
+    })();
+
+    // ========== GALLERY CAROUSEL ==========
+    (function () {
+      const images = [
+        { url: 'tender coconut.png', caption: 'Tender Coconut Special' },
+        { url: 'bread omelette.png', caption: 'Bread Omelette' },
+        { url: 'monster shakes.jpg', caption: 'Monster Shakes' },
+        { url: 'fresh juices.png', caption: 'Fresh Juices' },
+        { url: 'fries.jpg', caption: 'Maggi & Fries' }
+      ];
+
+      let currentSlide = 0;
+      const slideEl = document.getElementById('carouselSlide');
+      const captionEl = document.getElementById('slideCaption');
+      const dotsContainer = document.getElementById('carouselDots');
+      const prevBtn = document.getElementById('galleryPrevBtn');
+      const nextBtn = document.getElementById('galleryNextBtn');
+
+      function updateCarousel(index) {
+        if (index < 0) index = images.length - 1;
+        if (index >= images.length) index = 0;
+        currentSlide = index;
+        slideEl.style.backgroundImage = `url('${images[currentSlide].url}')`;
+        captionEl.innerText = images[currentSlide].caption;
+        document.querySelectorAll('.dot').forEach((dot, i) => {
+          dot.classList.toggle('active', i === currentSlide);
+        });
+      }
+
+      images.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => updateCarousel(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      prevBtn.addEventListener('click', () => updateCarousel(currentSlide - 1));
+      nextBtn.addEventListener('click', () => updateCarousel(currentSlide + 1));
+      updateCarousel(0);
+    })();
+
+    // ========== FRANCHISE FORM ==========
+    (function () {
+      const franchiseForm = document.getElementById('franchiseForm');
+      const formMessage = document.getElementById('formMessage');
+
+      franchiseForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('franchiseName').value.trim();
+        const email = document.getElementById('franchiseEmail').value.trim();
+        const mobile = document.getElementById('franchiseMobile').value.trim();
+
+        if (name && email && mobile) {
+          formMessage.innerHTML = '✅ Thank you! We will contact you soon.';
+          franchiseForm.reset();
+        } else {
+          formMessage.innerHTML = '⚠️ Please fill all fields.';
+        }
+        setTimeout(() => { formMessage.innerHTML = ''; }, 4000);
+      });
+    })();
+
+    // ========== BRANCHES SECTION ==========
+    (function () {
+      const branches = [
+        { name: "Guindy", area: "Industrial Estate", lat: 13.0130855, lng: 80.2241, address: "157, Water Works Rd, Guindy Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267403b252521%3A0x10371c441c18549b!2sMAAZI%20CAFE!5e0!3m2!1sen!2sin!4v1772578934672!5m2!1sen!2sin" },
+        { name: "Mahalingapuram", area: "Nungambakkam", lat: 13.0389, lng: 80.2261, address: "16, Ground, Brownstone Apartments Mahalingapuram Main Road, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526719ec905853%3A0x4c4f502137b45cfa!2sMaazi%20cafe%20-%20Mahalingapuram!5e0!3m2!1sen!2sin!4v1772579061571!5m2!1sen!2sin" },
+        { name: "Perungudi", area: "OMR", lat: 12.9613, lng: 80.2401, address: "near Kandhachavadi bus stop, Lakshman Nagar, Perungudi, Chennai, Tamil Nadu 600096", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0002fbee57%3A0xf6a7aa162c1cc95b!2sMaazi%20Cafe%20-%20OMR!5e0!3m2!1sen!2sin!4v1772579080109!5m2!1sen!2sin" },
+        { name: "Choolaimedu", area: "Nelson Manickam", lat: 13.0589, lng: 80.2175, address: "9/10, 368J+GHF, Nelson Manickam Rd, Sowrashtra Nagar, Choolaimedu, Chennai, Tamil Nadu 600094", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267000c18a28b%3A0x92f46ab6164ee521!2sMaazi%20cafe%40choolaimedu!5e0!3m2!1sen!2sin!4v1772579100279!5m2!1sen!2sin" },
+        { name: "Nungambakkam", area: "Josier St", lat: 13.0569, lng: 80.2279, address: "no 24/47, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670034762f1b%3A0x26281f21e523b405!2sMaazi%20Cafe%20%40%20Nungambakkam!5e0!3m2!1sen!2sin!4v1772579131019!5m2!1sen!2sin" },
+        { name: "Royapettah", area: "EA Mall", lat: 13.0476, lng: 80.2577, address: "Pattullos Rd, Anna Salai, Royapettah, Chennai, Tamil Nadu 600002 (EA Mall)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267005ec7c389%3A0x4162e3cb7e1d486f!2sMaazi%20Cafe%20%40%20ea%20mall!5e0!3m2!1sen!2sin!4v1772579147278!5m2!1sen!2sin" },
+        { name: "Porur", area: "Mount Poonamallee", lat: 13.0316, lng: 80.1578, address: "112/A, Mount Poonamallee Rd, Porur, Chennai, Tamil Nadu 600116", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526173bef36257%3A0xeaccb84d4e752a4a!2sMaazi%20Cafe%20-%20Porur!5e0!3m2!1sen!2sin!4v1772579160238!5m2!1sen!2sin" },
+        { name: "Teynampet", area: "DMS", lat: 13.0352, lng: 80.2397, address: "249, Anna Salai, opp. to Kamaraj Arrangam, Chokkalingam Nagar, Teynampet, Chennai, Tamil Nadu 600006", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676438116273%3A0x78c5bf11d6382fab!2sNew%20Maazi%20DMS!5e0!3m2!1sen!2sin!4v1772579281116!5m2!1sen!2sin" },
+        { name: "T.Nagar", area: "Habibullah Rd", lat: 13.0404, lng: 80.2285, address: "Maazi snacks And Cool Bar, new 62, No 142 B, Old, Habibullah Rd, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670051590ec7%3A0xc35c63cac7f77179!2sMaazi%20snacks%20and%20Cool%20Bar!5e0!3m2!1sen!2sin!4v1772579248881!5m2!1sen!2sin" },
+        { name: "Siruseri", area: "M.R Radha Rd", lat: 12.8271, lng: 80.2102, address: "R6C4+C7C, M.R Radha Rd, Semmanjeri, Siruseri, Tamil Nadu 603103", mapSrc: "" },
+        { name: "Perambur", area: "SIPCOT", lat: 13.1153, lng: 80.2448, address: "Melpatti Ponnappa St, Santhi Nagar, Vyasar Nagar Colony, Perambur, Chennai, Tamil Nadu 600039 (SIPCOT)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124490.98202703286!2d80.06155314335936!3d12.82108600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b0044c2ee79%3A0xbc42c35f9c6df005!2sMaazi%20Cafe%20%40%20SIPCOT!5e0!3m2!1sen!2sin!4v1772579311008!5m2!1sen!2sin" },
+        { name: "VIT", area: "Kelambakkam", lat: 12.8459, lng: 80.2194, address: "main road, 27, Kelambakkam - Vandalur Rd, opposite to VIT College, Melakottaiyur, Tamil Nadu 600127", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124478.71013710753!2d80.0823472433594!3d12.845879999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259d476a9dd31%3A0xe23c2dc748166681!2sMaazi%20Cafe%20-%20VIT!5e0!3m2!1sen!2sin!4v1772579385149!5m2!1sen!2sin" }
+      ];
+
+      const select = document.getElementById('branchSelect');
+      const mapContainer = document.getElementById('mapContainer');
+      const addressDiv = document.getElementById('branchAddress');
+      const cardsContainer = document.getElementById('branchCardsContainer');
+
+      branches.forEach((b, idx) => {
+        const option = document.createElement('option');
+        option.value = idx;
+        option.textContent = `📍 ${b.name} — ${b.area}`;
+        select.appendChild(option);
+      });
+
+      branches.forEach((b, idx) => {
+        const card = document.createElement('button');
+        card.className = 'branch-card-btn';
+        card.innerHTML = `<i class="fas fa-store"></i><span>${b.name}</span><small>${b.area}</small>`;
+        card.addEventListener('click', () => updateBranch(idx));
+        cardsContainer.appendChild(card);
+      });
+
+      function updateBranch(index) {
+        const branch = branches[index];
+        addressDiv.innerHTML = `<i class="fas fa-location-dot"></i> ${branch.address}`;
+
+        if (branch.mapSrc && branch.mapSrc.trim() !== '') {
+          mapContainer.innerHTML = `<iframe src="${branch.mapSrc}" width="100%" height="100%" style="border:0; min-height:350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+        } else {
+          mapContainer.innerHTML = `<div style="width:100%; height:100%; min-height:350px; background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#f5c542; flex-direction:column;"><i class="fas fa-map" style="font-size:3rem;"></i><p style="margin-top:1rem; padding:1rem; text-align:center;">📍 Map preview not available<br>${branch.address}</p></div>`;
+        }
+        select.value = index;
+      }
+
+      select.addEventListener('change', (e) => updateBranch(parseInt(e.target.value, 10)));
+      updateBranch(0);
+
+      const locateBtn = document.getElementById('locateBtn');
+
+      function calculateDistance(lat1, lon1, lat2, lon2) {
+        const R = 6371;
+        const dLat = (lat2 - lat1) * Math.PI / 180;
+        const dLon = (lon2 - lon1) * Math.PI / 180;
+        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+          Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+      }
+
+      locateBtn.addEventListener('click', () => {
+        if (!navigator.geolocation) {
+          alert('Geolocation not supported');
+          return;
+        }
+
+        locateBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> locating...';
+
+        navigator.geolocation.getCurrentPosition(
+          (pos) => {
+            const userLat = pos.coords.latitude;
+            const userLng = pos.coords.longitude;
+            let minDist = Infinity;
+            let nearestIdx = 0;
+
+            branches.forEach((b, idx) => {
+              if (b.lat && b.lng) {
+                const dist = calculateDistance(userLat, userLng, b.lat, b.lng);
+                if (dist < minDist) {
+                  minDist = dist;
+                  nearestIdx = idx;
+                }
+              }
+            });
+
+            updateBranch(nearestIdx);
+            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
+            addressDiv.innerHTML += `<br><small style="color:#f5c542;">✓ nearest branch: ${branches[nearestIdx].name} (approx ${minDist.toFixed(1)} km)</small>`;
+          },
+          () => {
+            alert('Unable to retrieve location');
+            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
+          }
+        );
+      });
+    })();
+  </script>
+
+  <noscript>
+    <div
+      style="position:fixed; top:0; left:0; width:100%; height:100%; background:black; color:red; display:flex; align-items:center; justify-content:center; z-index:99999; font-size:20px; text-align:center; padding:20px;">
+      JavaScript is required to view this website. Please enable JavaScript in your browser settings.
+    </div>
+  </noscript>
+</body>
+
+</html>
