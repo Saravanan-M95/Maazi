@@ -1542,105 +1542,127 @@
     })();
 
     // ========== BRANCHES SECTION ==========
-    (function () {
-      const branches = [
-        { name: "Guindy", area: "Industrial Estate", lat: 13.0130855, lng: 80.2241, address: "157, Water Works Rd, Guindy Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267403b252521%3A0x10371c441c18549b!2sMAAZI%20CAFE!5e0!3m2!1sen!2sin!4v1772578934672!5m2!1sen!2sin" },
-        { name: "Mahalingapuram", area: "Nungambakkam", lat: 13.0389, lng: 80.2261, address: "16, Ground, Brownstone Apartments Mahalingapuram Main Road, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526719ec905853%3A0x4c4f502137b45cfa!2sMaazi%20cafe%20-%20Mahalingapuram!5e0!3m2!1sen!2sin!4v1772579061571!5m2!1sen!2sin" },
-        { name: "Perungudi", area: "OMR", lat: 12.9613, lng: 80.2401, address: "near Kandhachavadi bus stop, Lakshman Nagar, Perungudi, Chennai, Tamil Nadu 600096", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0002fbee57%3A0xf6a7aa162c1cc95b!2sMaazi%20Cafe%20-%20OMR!5e0!3m2!1sen!2sin!4v1772579080109!5m2!1sen!2sin" },
-        { name: "Choolaimedu", area: "Nelson Manickam", lat: 13.0589, lng: 80.2175, address: "9/10, 368J+GHF, Nelson Manickam Rd, Sowrashtra Nagar, Choolaimedu, Chennai, Tamil Nadu 600094", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267000c18a28b%3A0x92f46ab6164ee521!2sMaazi%20cafe%40choolaimedu!5e0!3m2!1sen!2sin!4v1772579100279!5m2!1sen!2sin" },
-        { name: "Nungambakkam", area: "Josier St", lat: 13.0569, lng: 80.2279, address: "no 24/47, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670034762f1b%3A0x26281f21e523b405!2sMaazi%20Cafe%20%40%20Nungambakkam!5e0!3m2!1sen!2sin!4v1772579131019!5m2!1sen!2sin" },
-        { name: "Royapettah", area: "EA Mall", lat: 13.0476, lng: 80.2577, address: "Pattullos Rd, Anna Salai, Royapettah, Chennai, Tamil Nadu 600002 (EA Mall)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267005ec7c389%3A0x4162e3cb7e1d486f!2sMaazi%20Cafe%20%40%20ea%20mall!5e0!3m2!1sen!2sin!4v1772579147278!5m2!1sen!2sin" },
-        { name: "Porur", area: "Mount Poonamallee", lat: 13.0316, lng: 80.1578, address: "112/A, Mount Poonamallee Rd, Porur, Chennai, Tamil Nadu 600116", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526173bef36257%3A0xeaccb84d4e752a4a!2sMaazi%20Cafe%20-%20Porur!5e0!3m2!1sen!2sin!4v1772579160238!5m2!1sen!2sin" },
-        { name: "Teynampet", area: "DMS", lat: 13.0352, lng: 80.2397, address: "249, Anna Salai, opp. to Kamaraj Arrangam, Chokkalingam Nagar, Teynampet, Chennai, Tamil Nadu 600006", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676438116273%3A0x78c5bf11d6382fab!2sNew%20Maazi%20DMS!5e0!3m2!1sen!2sin!4v1772579281116!5m2!1sen!2sin" },
-        { name: "T.Nagar", area: "Habibullah Rd", lat: 13.0404, lng: 80.2285, address: "Maazi snacks And Cool Bar, new 62, No 142 B, Old, Habibullah Rd, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670051590ec7%3A0xc35c63cac7f77179!2sMaazi%20snacks%20and%20Cool%20Bar!5e0!3m2!1sen!2sin!4v1772579248881!5m2!1sen!2sin" },
-        { name: "Siruseri", area: "M.R Radha Rd", lat: 12.8271, lng: 80.2102, address: "R6C4+C7C, M.R Radha Rd, Semmanjeri, Siruseri, Tamil Nadu 603103", mapSrc: "" },
-        { name: "Perambur", area: "SIPCOT", lat: 13.1153, lng: 80.2448, address: "Melpatti Ponnappa St, Santhi Nagar, Vyasar Nagar Colony, Perambur, Chennai, Tamil Nadu 600039 (SIPCOT)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124490.98202703286!2d80.06155314335936!3d12.82108600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b0044c2ee79%3A0xbc42c35f9c6df005!2sMaazi%20Cafe%20%40%20SIPCOT!5e0!3m2!1sen!2sin!4v1772579311008!5m2!1sen!2sin" },
-        { name: "VIT", area: "Kelambakkam", lat: 12.8459, lng: 80.2194, address: "main road, 27, Kelambakkam - Vandalur Rd, opposite to VIT College, Melakottaiyur, Tamil Nadu 600127", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124478.71013710753!2d80.0823472433594!3d12.845879999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259d476a9dd31%3A0xe23c2dc748166681!2sMaazi%20Cafe%20-%20VIT!5e0!3m2!1sen!2sin!4v1772579385149!5m2!1sen!2sin" }
-      ];
+// ========== BRANCHES SECTION ==========
+(function() {
+  const branches = [
+    { name: "Guindy", area: "Industrial Estate", lat: 13.0130855, lng: 80.2241, address: "157, Water Works Rd, Guindy Industrial Estate, SIDCO Industrial Estate, Guindy, Chennai, Tamil Nadu 600032", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267403b252521%3A0x10371c441c18549b!2sMAAZI%20CAFE!5e0!3m2!1sen!2sin!4v1772578934672!5m2!1sen!2sin" },
+    { name: "Mahalingapuram", area: "Nungambakkam", lat: 13.0389, lng: 80.2261, address: "16, Ground, Brownstone Apartments Mahalingapuram Main Road, Mahalingapuram, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526719ec905853%3A0x4c4f502137b45cfa!2sMaazi%20cafe%20-%20Mahalingapuram!5e0!3m2!1sen!2sin!4v1772579061571!5m2!1sen!2sin" },
+    { name: "Perungudi", area: "OMR", lat: 12.9613, lng: 80.2401, address: "near Kandhachavadi bus stop, Lakshman Nagar, Perungudi, Chennai, Tamil Nadu 600096", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d0002fbee57%3A0xf6a7aa162c1cc95b!2sMaazi%20Cafe%20-%20OMR!5e0!3m2!1sen!2sin!4v1772579080109!5m2!1sen!2sin" },
+    { name: "Choolaimedu", area: "Nelson Manickam", lat: 13.0589, lng: 80.2175, address: "9/10, 368J+GHF, Nelson Manickam Rd, Sowrashtra Nagar, Choolaimedu, Chennai, Tamil Nadu 600094", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267000c18a28b%3A0x92f46ab6164ee521!2sMaazi%20cafe%40choolaimedu!5e0!3m2!1sen!2sin!4v1772579100279!5m2!1sen!2sin" },
+    { name: "Nungambakkam", area: "Josier St", lat: 13.0569, lng: 80.2279, address: "no 24/47, Josier St, Tirumurthy Nagar, Nungambakkam, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670034762f1b%3A0x26281f21e523b405!2sMaazi%20Cafe%20%40%20Nungambakkam!5e0!3m2!1sen!2sin!4v1772579131019!5m2!1sen!2sin" },
+    { name: "Royapettah", area: "EA Mall", lat: 13.0476, lng: 80.2577, address: "Pattullos Rd, Anna Salai, Royapettah, Chennai, Tamil Nadu 600002 (EA Mall)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267005ec7c389%3A0x4162e3cb7e1d486f!2sMaazi%20Cafe%20%40%20ea%20mall!5e0!3m2!1sen!2sin!4v1772579147278!5m2!1sen!2sin" },
+    { name: "Porur", area: "Mount Poonamallee", lat: 13.0316, lng: 80.1578, address: "112/A, Mount Poonamallee Rd, Porur, Chennai, Tamil Nadu 600116", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526173bef36257%3A0xeaccb84d4e752a4a!2sMaazi%20Cafe%20-%20Porur!5e0!3m2!1sen!2sin!4v1772579160238!5m2!1sen!2sin" },
+    { name: "Teynampet", area: "DMS", lat: 13.0352, lng: 80.2397, address: "249, Anna Salai, opp. to Kamaraj Arrangam, Chokkalingam Nagar, Teynampet, Chennai, Tamil Nadu 600006", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676438116273%3A0x78c5bf11d6382fab!2sNew%20Maazi%20DMS!5e0!3m2!1sen!2sin!4v1772579281116!5m2!1sen!2sin" },
+    { name: "T.Nagar", area: "Habibullah Rd", lat: 13.0404, lng: 80.2285, address: "Maazi snacks And Cool Bar, new 62, No 142 B, Old, Habibullah Rd, Chennai, Tamil Nadu 600034", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124395.3425644088!2d80.06456504335938!3d13.013085500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52670051590ec7%3A0xc35c63cac7f77179!2sMaazi%20snacks%20and%20Cool%20Bar!5e0!3m2!1sen!2sin!4v1772579248881!5m2!1sen!2sin" },
+    { name: "Siruseri", area: "M.R Radha Rd", lat: 12.8271, lng: 80.2102, address: "R6C4+C7C, M.R Radha Rd, Semmanjeri, Siruseri, Tamil Nadu 603103", mapSrc: "" },
+    { name: "Perambur", area: "SIPCOT", lat: 13.1153, lng: 80.2448, address: "Melpatti Ponnappa St, Santhi Nagar, Vyasar Nagar Colony, Perambur, Chennai, Tamil Nadu 600039 (SIPCOT)", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124490.98202703286!2d80.06155314335936!3d12.82108600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b0044c2ee79%3A0xbc42c35f9c6df005!2sMaazi%20Cafe%20%40%20SIPCOT!5e0!3m2!1sen!2sin!4v1772579311008!5m2!1sen!2sin" },
+    { name: "VIT", area: "Kelambakkam", lat: 12.8459, lng: 80.2194, address: "main road, 27, Kelambakkam - Vandalur Rd, opposite to VIT College, Melakottaiyur, Tamil Nadu 600127", mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124478.71013710753!2d80.0823472433594!3d12.845879999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259d476a9dd31%3A0xe23c2dc748166681!2sMaazi%20Cafe%20-%20VIT!5e0!3m2!1sen!2sin!4v1772579385149!5m2!1sen!2sin" }
+  ];
 
-      const select = document.getElementById('branchSelect');
-      const mapContainer = document.getElementById('mapContainer');
-      const addressDiv = document.getElementById('branchAddress');
-      const cardsContainer = document.getElementById('branchCardsContainer');
+  const select = document.getElementById('branchSelect');
+  const mapContainer = document.getElementById('mapContainer');
+  const addressDiv = document.getElementById('branchAddress');
+  const cardsContainer = document.getElementById('branchCardsContainer');
 
-      branches.forEach((b, idx) => {
-        const option = document.createElement('option');
-        option.value = idx;
-        option.textContent = `📍 ${b.name} — ${b.area}`;
-        select.appendChild(option);
+  // Populate dropdown
+  branches.forEach((b, idx) => {
+    const option = document.createElement('option');
+    option.value = idx;
+    option.textContent = `📍 ${b.name} — ${b.area}`;
+    select.appendChild(option);
+  });
+
+  // Create branch cards
+  branches.forEach((b, idx) => {
+    const card = document.createElement('button');
+    card.className = 'branch-card-btn';
+    card.innerHTML = `<i class="fas fa-store"></i><span>${b.name}</span><small>${b.area}</small>`;
+    card.addEventListener('click', () => updateBranch(idx));
+    cardsContainer.appendChild(card);
+  });
+
+  function updateBranch(index) {
+    const branch = branches[index];
+    addressDiv.innerHTML = `<i class="fas fa-location-dot"></i> ${branch.address}`;
+    
+    if (branch.mapSrc && branch.mapSrc.trim() !== '') {
+      mapContainer.innerHTML = `<iframe src="${branch.mapSrc}" width="100%" height="100%" style="border:0; min-height:350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    } else {
+      mapContainer.innerHTML = `<div style="width:100%; height:100%; min-height:350px; background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#f5c542; flex-direction:column;"><i class="fas fa-map" style="font-size:3rem;"></i><p style="margin-top:1rem; padding:1rem; text-align:center;">📍 Map preview not available<br>${branch.address}</p></div>`;
+    }
+    select.value = index;
+    
+    // Scroll to map smoothly with highlight effect
+    setTimeout(() => {
+      mapContainer.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'center' 
       });
+      
+      // Add temporary highlight effect
+      mapContainer.style.transition = 'box-shadow 0.5s ease, border-color 0.5s ease';
+      mapContainer.style.boxShadow = '0 0 30px #f5c542';
+      mapContainer.style.borderColor = '#f5c542';
+      
+      setTimeout(() => {
+        mapContainer.style.boxShadow = 'var(--glow-shadow)';
+        mapContainer.style.borderColor = '#f5c542'; // Keep original color
+      }, 1000);
+    }, 300); // Delay to ensure iframe loads
+  }
 
-      branches.forEach((b, idx) => {
-        const card = document.createElement('button');
-        card.className = 'branch-card-btn';
-        card.innerHTML = `<i class="fas fa-store"></i><span>${b.name}</span><small>${b.area}</small>`;
-        card.addEventListener('click', () => updateBranch(idx));
-        cardsContainer.appendChild(card);
-      });
+  select.addEventListener('change', (e) => updateBranch(parseInt(e.target.value, 10)));
+  updateBranch(0);
 
-      function updateBranch(index) {
-        const branch = branches[index];
-        addressDiv.innerHTML = `<i class="fas fa-location-dot"></i> ${branch.address}`;
+  const locateBtn = document.getElementById('locateBtn');
+  
+  function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + 
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * 
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+  }
 
-        if (branch.mapSrc && branch.mapSrc.trim() !== '') {
-          mapContainer.innerHTML = `<iframe src="${branch.mapSrc}" width="100%" height="100%" style="border:0; min-height:350px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
-        } else {
-          mapContainer.innerHTML = `<div style="width:100%; height:100%; min-height:350px; background:#2a2a2a; display:flex; align-items:center; justify-content:center; color:#f5c542; flex-direction:column;"><i class="fas fa-map" style="font-size:3rem;"></i><p style="margin-top:1rem; padding:1rem; text-align:center;">📍 Map preview not available<br>${branch.address}</p></div>`;
-        }
-        select.value = index;
-      }
-
-      select.addEventListener('change', (e) => updateBranch(parseInt(e.target.value, 10)));
-      updateBranch(0);
-
-      const locateBtn = document.getElementById('locateBtn');
-
-      function calculateDistance(lat1, lon1, lat2, lon2) {
-        const R = 6371;
-        const dLat = (lat2 - lat1) * Math.PI / 180;
-        const dLon = (lon2 - lon1) * Math.PI / 180;
-        const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-          Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-          Math.sin(dLon / 2) * Math.sin(dLon / 2);
-        return R * (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
-      }
-
-      locateBtn.addEventListener('click', () => {
-        if (!navigator.geolocation) {
-          alert('Geolocation not supported');
-          return;
-        }
-
-        locateBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> locating...';
-
-        navigator.geolocation.getCurrentPosition(
-          (pos) => {
-            const userLat = pos.coords.latitude;
-            const userLng = pos.coords.longitude;
-            let minDist = Infinity;
-            let nearestIdx = 0;
-
-            branches.forEach((b, idx) => {
-              if (b.lat && b.lng) {
-                const dist = calculateDistance(userLat, userLng, b.lat, b.lng);
-                if (dist < minDist) {
-                  minDist = dist;
-                  nearestIdx = idx;
-                }
-              }
-            });
-
-            updateBranch(nearestIdx);
-            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
-            addressDiv.innerHTML += `<br><small style="color:#f5c542;">✓ nearest branch: ${branches[nearestIdx].name} (approx ${minDist.toFixed(1)} km)</small>`;
-          },
-          () => {
-            alert('Unable to retrieve location');
-            locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
+  locateBtn.addEventListener('click', () => {
+    if (!navigator.geolocation) { 
+      alert('Geolocation not supported'); 
+      return; 
+    }
+    
+    locateBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> locating...';
+    
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const userLat = pos.coords.latitude;
+        const userLng = pos.coords.longitude;
+        let minDist = Infinity;
+        let nearestIdx = 0;
+        
+        branches.forEach((b, idx) => {
+          if (b.lat && b.lng) {
+            const dist = calculateDistance(userLat, userLng, b.lat, b.lng);
+            if (dist < minDist) { 
+              minDist = dist; 
+              nearestIdx = idx; 
+            }
           }
-        );
-      });
-    })();
+        });
+        
+        updateBranch(nearestIdx);
+        locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
+        addressDiv.innerHTML += `<br><small style="color:#f5c542;">✓ nearest branch: ${branches[nearestIdx].name} (approx ${minDist.toFixed(1)} km)</small>`;
+      },
+      () => {
+        alert('Unable to retrieve location');
+        locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
+      }
+    );
+  });
+})();
+
   </script>
 
   <noscript>
