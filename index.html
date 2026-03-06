@@ -1541,7 +1541,6 @@
       });
     })();
 
-    // ========== BRANCHES SECTION ==========
 // ========== BRANCHES SECTION ==========
 (function() {
   const branches = [
@@ -1577,11 +1576,12 @@
     const card = document.createElement('button');
     card.className = 'branch-card-btn';
     card.innerHTML = `<i class="fas fa-store"></i><span>${b.name}</span><small>${b.area}</small>`;
-    card.addEventListener('click', () => updateBranch(idx));
+    card.addEventListener('click', () => updateBranch(idx, true)); // Pass true to enable scroll
     cardsContainer.appendChild(card);
   });
 
-  function updateBranch(index) {
+  // Modified updateBranch function with scrollToMap parameter
+  function updateBranch(index, scrollToMap = false) {
     const branch = branches[index];
     addressDiv.innerHTML = `<i class="fas fa-location-dot"></i> ${branch.address}`;
     
@@ -1592,27 +1592,32 @@
     }
     select.value = index;
     
-    // Scroll to map smoothly with highlight effect
-    setTimeout(() => {
-      mapContainer.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'center' 
-      });
-      
-      // Add temporary highlight effect
-      mapContainer.style.transition = 'box-shadow 0.5s ease, border-color 0.5s ease';
-      mapContainer.style.boxShadow = '0 0 30px #f5c542';
-      mapContainer.style.borderColor = '#f5c542';
-      
+    // Only scroll to map when user selects a branch (scrollToMap = true)
+    if (scrollToMap) {
       setTimeout(() => {
-        mapContainer.style.boxShadow = 'var(--glow-shadow)';
-        mapContainer.style.borderColor = '#f5c542'; // Keep original color
-      }, 1000);
-    }, 300); // Delay to ensure iframe loads
+        mapContainer.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+        
+        // Add temporary highlight effect
+        mapContainer.style.transition = 'box-shadow 0.5s ease, border-color 0.5s ease';
+        mapContainer.style.boxShadow = '0 0 30px #f5c542';
+        mapContainer.style.borderColor = '#f5c542';
+        
+        setTimeout(() => {
+          mapContainer.style.boxShadow = 'var(--glow-shadow)';
+          mapContainer.style.borderColor = '#f5c542';
+        }, 1000);
+      }, 300);
+    }
   }
 
-  select.addEventListener('change', (e) => updateBranch(parseInt(e.target.value, 10)));
-  updateBranch(0);
+  // Update dropdown change event to enable scroll
+  select.addEventListener('change', (e) => updateBranch(parseInt(e.target.value, 10), true));
+  
+  // Initialize with first branch but WITHOUT scrolling
+  updateBranch(0, false); // false = no scroll on page load
 
   const locateBtn = document.getElementById('locateBtn');
   
@@ -1651,7 +1656,7 @@
           }
         });
         
-        updateBranch(nearestIdx);
+        updateBranch(nearestIdx, true); // Enable scroll for location button
         locateBtn.innerHTML = '<i class="fas fa-location-arrow"></i> Locate near shop';
         addressDiv.innerHTML += `<br><small style="color:#f5c542;">✓ nearest branch: ${branches[nearestIdx].name} (approx ${minDist.toFixed(1)} km)</small>`;
       },
@@ -1662,7 +1667,6 @@
     );
   });
 })();
-
   </script>
 
   <noscript>
